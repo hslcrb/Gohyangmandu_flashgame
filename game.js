@@ -10,6 +10,12 @@ const game = {
 
     // 에셋 설정
     assets: {
+        sounds: {
+            click: '고향만두_전체/sounds/31.mp3',
+            mixing: '고향만두_전체/sounds/233.mp3',
+            success: '고향만두_전체/sounds/232.mp3',
+            fail: '고향만두_전체/sounds/35.mp3',
+        },
         ingredients: [
             { id: 'pig', name: '돼지고기', sprite: 'DefineSprite_161' },
             { id: 'dubu', name: '두부', sprite: 'DefineSprite_168' },
@@ -52,11 +58,51 @@ const game = {
     },
 
     bindEvents() {
-        document.getElementById('btn-start').addEventListener('click', () => this.changeScreen('ingredients'));
-        document.getElementById('btn-to-folding').addEventListener('click', () => this.changeScreen('folding'));
-        document.getElementById('btn-to-cooking').addEventListener('click', () => this.changeScreen('cooking'));
-        document.getElementById('btn-evaluate').addEventListener('click', () => this.evaluate());
+        document.getElementById('btn-start').addEventListener('click', () => {
+            this.playSound('click');
+            this.changeScreen('ingredients');
+        });
+        document.getElementById('btn-to-mixing').addEventListener('click', () => {
+            this.playSound('click');
+            this.startMixing();
+        });
+        document.getElementById('btn-to-folding').addEventListener('click', () => {
+            this.playSound('click');
+            this.changeScreen('folding');
+        });
+        document.getElementById('btn-to-cooking').addEventListener('click', () => {
+            this.playSound('click');
+            this.changeScreen('cooking');
+        });
+        document.getElementById('btn-evaluate').addEventListener('click', () => {
+            this.playSound('click');
+            this.evaluate();
+        });
         document.getElementById('btn-restart').addEventListener('click', () => location.reload());
+    },
+
+    playSound(id) {
+        const audio = new Audio(this.assets.sounds[id]);
+        audio.play().catch(e => console.log("Audio play blocked", e));
+    },
+
+    startMixing() {
+        this.changeScreen('mixing');
+        const sprite = document.getElementById('mixing-sprite');
+        const nextBtn = document.querySelector('#screen-mixing .btn-primary');
+        let frame = 1;
+
+        this.playSound('mixing');
+
+        const interval = setInterval(() => {
+            frame = (frame % 4) + 1;
+            sprite.src = `고향만두_전체/sprites/DefineSprite_261/${frame}.png`;
+        }, 150);
+
+        setTimeout(() => {
+            clearInterval(interval);
+            nextBtn.disabled = false;
+        }, 3000);
     },
 
     changeScreen(screenId) {
@@ -195,10 +241,12 @@ const game = {
         const desc = document.getElementById('result-desc');
 
         if (success) {
+            this.playSound('success');
             title.innerText = "성공! 명가의 맛입니다.";
             desc.innerText = "당신이 빚은 만두는 고향의 향수를 불러일으키는 최고의 맛입니다.";
             document.getElementById('screen-result').style.backgroundImage = "url('고향만두_전체/frames/177.png')";
         } else {
+            this.playSound('fail');
             title.innerText = "실패... 뭔가 부족합니다.";
             desc.innerText = "재료나 조리 방식이 잘못된 것 같습니다. 다시 도전해 보세요.";
             document.getElementById('screen-result').style.backgroundImage = "url('고향만두_전체/frames/175.png')";

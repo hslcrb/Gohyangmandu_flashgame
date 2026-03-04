@@ -25,11 +25,27 @@
         <!-- 재료 선택 화면 -->
         <section id="screen-ingredients" class="screen">
             <div class="game-stage">
+                <h2 class="section-title">만두소 재료 고르기</h2>
                 <div class="ingredients-grid">
-                    <!-- 재료 버튼들이 동적으로 생성되거나 여기에 배치됨 -->
+                    <!-- 재료 버튼들 -->
                 </div>
                 <div class="action-bar">
-                    <button id="btn-to-folding" class="btn-primary">만두 빚기</button>
+                    <button id="btn-to-mixing" class="btn-primary">반죽하기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 반죽하기 화면 -->
+        <section id="screen-mixing" class="screen">
+            <div class="game-stage">
+                <h2 class="section-title">만두소 섞기</h2>
+                <div class="mixing-area">
+                    <div id="bowl" class="bowl-animation">
+                        <img id="mixing-sprite" src="고향만두_전체/sprites/DefineSprite_261/1.png" alt="믹싱">
+                    </div>
+                </div>
+                <div class="action-bar">
+                    <button id="btn-to-folding" class="btn-primary" disabled>만두 빚기</button>
                 </div>
             </div>
         </section>

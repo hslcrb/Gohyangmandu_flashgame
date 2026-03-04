@@ -183,6 +183,22 @@ body {
     font-size: 0.9rem;
 }
 
+/* 반죽하기 화면 스타일 */
+.mixing-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background: var(--glass-bg);
+    border-radius: 20px;
+}
+
+.bowl-animation img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
 /* 만두 빚기 화면 스타일 */
 .shape-grid {
     display: grid;

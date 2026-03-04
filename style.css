@@ -22,6 +22,7 @@ body {
     align-items: center;
     height: 100vh;
     overflow: hidden;
+    background: radial-gradient(circle at center, #3a3a3a 0%, #111 100%);
 }
 
 #game-container {
@@ -75,6 +76,21 @@ body {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .subtitle {

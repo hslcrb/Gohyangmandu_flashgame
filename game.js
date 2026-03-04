@@ -18,7 +18,12 @@ const game = {
             { id: 'bigpa', name: '대파', sprite: 'DefineSprite_177' },
             { id: 'yangpa', name: '양파', sprite: 'DefineSprite_180' },
             { id: 'pepper', name: '고추', sprite: 'DefineSprite_183' },
-            // 추가 재료들...
+            { id: 'salt', name: '소금', sprite: 'DefineSprite_189' },
+            { id: 'sugar', name: '설탕', sprite: 'DefineSprite_192' },
+            { id: 'msg', name: '미원', sprite: 'DefineSprite_201' },
+            { id: 'water', name: '물', sprite: 'DefineSprite_198' },
+            { id: 'ketchup', name: '케첩', sprite: 'DefineSprite_204' },
+            { id: 'coffee', name: '커피', sprite: 'DefineSprite_195' },
         ],
         shapes: [
             { id: 1, name: '일반 만두', frame: 1 },
@@ -172,7 +177,16 @@ const game = {
 
         const success = hasEnoughIngredients && isRightShape && isCorrectCooking;
 
-        this.showResult(success);
+        // 맛보기 애니메이션 효과
+        const btn = document.getElementById('btn-evaluate');
+        btn.innerText = "음... 맛을 볼까요?";
+        btn.disabled = true;
+
+        setTimeout(() => {
+            this.showResult(success);
+            btn.disabled = false;
+            btn.innerText = "맛보기";
+        }, 1500);
     },
 
     showResult(success) {

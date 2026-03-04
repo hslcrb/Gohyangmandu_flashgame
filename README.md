@@ -1,17 +1,18 @@
-# 고향만두 Fullscreen & Standalone Project 🥟
+# 고향만두 Fullscreen & Pro Project / Go-yang Man-du Fullscreen & Pro Project 🥟
 
-이 프로젝트는 [Ruffle](https://ruffle.rs/) 에뮬레이터를 사용하여 전설적인 플래시 게임 '고향만두'를 현대적인 웹 환경에서 **완벽하게** 복원한 프로젝트입니다.
+이 프로젝트는 '고향만두' 플래시 게임의 완벽한 복원판입니다. / This project is a perfect restoration of the "Gohyangmandu" Flash game.
 
-## ✨ 주요 특징
-- **전체 화면 지원**: 어느 해상도에서도 화면에 꽉 차는 몰입감 있는 플레이가 가능합니다.
-- **자동 실행 (Auto-play)**: 페이지를 여는 즉시 게임이 시작됩니다. 별도의 플레이 버튼을 누를 필요가 없습니다.
-- **완전 독립 실행**: 서버 설정이 필요 없는 `file://` 프로토콜 최적화 버전입니다 (Base64 데이터 임베딩).
-- **원본 완벽 재현**: 원작의 모든 사운드, 대사, 숨겨진 레시피와 시스템이 100% 작동합니다.
+## ✨ Features / 주요 특징
+- **Fullscreen Support / 전체 화면 지원**: Scalable immersive experience. / 화면 크기에 맞게 자동 확장됩니다.
+- **Auto-play / 자동 실행**: Instant start without a "Play" button. / 시작 버튼 없이 즉시 로드됩니다.
+- **Control Bar / 제어 바**: Floating UI for volume and fullscreen. / 볼륨 및 전체화면을 위한 유동형 UI.
+- **Security / 보안**: Right-click context menu disabled. / 우클릭 컨텍스트 메뉴가 금지되어 있습니다.
+- **Standalone / 단독 실행**: Works via `file://` protocol (Base64 embedded). / `file://` 프로토콜에서 즉시 작동합니다 (Base64 임베딩).
 
-## 🚀 실행 방법
-1. 이 폴더에 있는 `index.html` 파일을 더블 클릭하여 웹 브라우저(크롬, 엣지 등)로 엽니다.
-2. 즉시 게임이 전체 화면으로 시작됩니다.
+## 🚀 How to Run / 실행 방법
+1. Open `index.html` in any modern browser. / 현대적인 브라우저에서 `index.html`을 엽니다.
+2. Enjoy the game immediately! / 게임을 즉시 즐기세요!
 
 ---
 **Managed by Antigravity AI**
-"완벽한 고향만두의 맛을 이제 웹에서 그대로 느껴보세요!"
+"History restored perfectly." / "역사가 완벽하게 복원되었습니다."

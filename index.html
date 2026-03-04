@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고향만두 - 명가의 맛</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Gaegu:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- 메인 화면 -->
+        <section id="screen-start" class="screen active">
+            <div class="overlay">
+                <h1 class="game-title">고향만두</h1>
+                <p class="subtitle">명가의 맛을 빚다</p>
+                <button id="btn-start" class="btn-primary">게임 시작</button>
+            </div>
+        </section>
+
+        <!-- 재료 선택 화면 -->
+        <section id="screen-ingredients" class="screen">
+            <div class="game-stage">
+                <div class="ingredients-grid">
+                    <!-- 재료 버튼들이 동적으로 생성되거나 여기에 배치됨 -->
+                </div>
+                <div class="action-bar">
+                    <button id="btn-to-folding" class="btn-primary">만두 빚기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 만두 빚기 화면 -->
+        <section id="screen-folding" class="screen">
+            <div class="game-stage">
+                <h2 class="section-title">만두 모양 선택</h2>
+                <div class="shape-grid">
+                    <!-- 모양 옵션들이 동적으로 생성됨 -->
+                </div>
+                <div class="action-bar">
+                    <button id="btn-to-cooking" class="btn-primary">요리하기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 요리하기 화면 -->
+        <section id="screen-cooking" class="screen">
+            <div class="game-stage">
+                <h2 class="section-title">조리 방식 & 용기 선택</h2>
+                <div class="cooking-container">
+                    <div class="method-selector">
+                        <h3>조리 방식</h3>
+                        <div id="method-options" class="options-grid"></div>
+                    </div>
+                    <div class="container-selector">
+                        <h3>용기 선택</h3>
+                        <div id="container-options" class="options-grid"></div>
+                    </div>
+                </div>
+                <div class="action-bar">
+                    <button id="btn-evaluate" class="btn-primary">맛보기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 결과 화면 -->
+        <section id="screen-result" class="screen">
+            <div class="result-box">
+                <h2 id="result-title">맛의 평가</h2>
+                <p id="result-desc"></p>
+                <button id="btn-restart" class="btn-secondary">다시 하기</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

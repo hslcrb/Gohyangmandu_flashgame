@@ -1,0 +1,296 @@
+:root {
+    --primary-color: #e63946;
+    --secondary-color: #457b9d;
+    --bg-color: #f1faee;
+    --text-color: #1d3557;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #222;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 800px;
+    height: 600px;
+    background-color: var(--bg-color);
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* 메인 화면 스타일 */
+#screen-start {
+    background-image: url('고향만두_전체/frames/1.png');
+    /* 배경 이미지 1번 */
+}
+
+.overlay {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+
+.game-title {
+    font-family: 'Gaegu', cursive;
+    font-size: 5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* 버튼 스타일 */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #d62828;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+/* 게임 스테이지 공통 */
+.game-stage {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.action-bar {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 재료 선택 화면 스타일 */
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+    background: var(--glass-bg);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.ingredient-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+.ingredient-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.ingredient-btn.selected {
+    background-color: rgba(230, 57, 70, 0.1);
+    border-color: var(--primary-color);
+}
+
+.ingredient-btn img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.ingredient-btn span {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* 만두 빚기 화면 스타일 */
+.shape-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 20px;
+}
+
+.shape-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    background: white;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shape-btn:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.shape-btn.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(230, 57, 70, 0.05);
+}
+
+.shape-btn img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+/* 요리하기 화면 스타일 */
+.cooking-container {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+    background: var(--glass-bg);
+    border-radius: 20px;
+    height: 100%;
+}
+
+.method-selector,
+.container-selector {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.option-btn {
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid var(--secondary-color);
+    background: white;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-btn:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.option-btn.selected {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* 결과 화면 스타일 */
+.result-box {
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    padding: 3rem;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 80%;
+}
+
+#result-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+#result-desc {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* 애니메이션 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

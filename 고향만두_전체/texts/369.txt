@@ -1,0 +1,9 @@
+ 1.
+--- RECORDSEPARATOR ---
+만
+--- RECORDSEPARATOR ---
+두
+--- RECORDSEPARATOR ---
+빚
+--- RECORDSEPARATOR ---
+기

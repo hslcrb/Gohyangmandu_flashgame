@@ -1,0 +1,20 @@
+on(release){
+   gotoAndStop(92);
+   garu.gotoAndStop(1);
+   pig.gotoAndStop(1);
+   dubu.gotoAndStop(1);
+   yangpa.gotoAndStop(1);
+   bechu.gotoAndStop(1);
+   egg.gotoAndStop(1);
+   oil.gotoAndStop(1);
+   ace.gotoAndStop(1);
+   pepper.gotoAndStop(1);
+   manle.gotoAndStop(1);
+   cheese.gotoAndStop(1);
+   wbigpa.gotoAndStop(1);
+   jang.gotoAndStop(1);
+   mayo.gotoAndStop(1);
+   ong.gotoAndStop(1);
+   score_sok.gotoAndStop(1);
+   check1.gotoAndStop(1);
+}

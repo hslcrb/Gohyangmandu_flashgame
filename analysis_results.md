@@ -1,4 +1,4 @@
-# Gohyangmandu (고향만두) Project Analysis
+﻿# Gohyangmandu (怨좏뼢留뚮몢) Project Analysis
 
 ## Overview
 This project contains the source files for the classic Korean Flash game "Gohyangmandu" (Home-made Dumpling). The game is built using **ActionScript 2.0** and relies on frame-based state transitions and movie clip manipulations.
@@ -19,19 +19,19 @@ To achieve the "Success" (Clear) screen, the following conditions must be met:
 ### Ingredient Mapping
 The ingredients are tracked by individual movie clips and a cumulative variable `score_sok`. When an ingredient is selected, its movie clip goes to **Frame 2** and `score_sok` increments.
 
-*   **Pig (돼지고기)**: `pig`
-*   **Tofu (두부)**: `dubu`
-*   **Garlic (마늘)**: `manle`
-*   **Cheese (치즈)**: `cheese`
-*   **Green Onion (대파)**: `bigpa`
-*   **Onion (양파)**: `yangpa`
-*   **Pepper (고추)**: `pepper`
+*   **Pig (?쇱?怨좉린)**: `pig`
+*   **Tofu (?먮?)**: `dubu`
+*   **Garlic (留덈뒛)**: `manle`
+*   **Cheese (移섏쫰)**: `cheese`
+*   **Green Onion (???**: `bigpa`
+*   **Onion (?묓뙆)**: `yangpa`
+*   **Pepper (怨좎텛)**: `pepper`
 *   *And others...*
 
 ## Project Structure
-*   `고향만두.swf`: The compiled Flash game.
-*   `고향만두_게임프로젝트전체파일.fla`: The Adobe Flash source project file.
-*   `고향만두_게임프로젝트전체scripts/`: Decompiled ActionScript files organized by frames and sprites.
+*   `怨좏뼢留뚮몢.swf`: The compiled Flash game.
+*   `怨좏뼢留뚮몢_寃뚯엫?꾨줈?앺듃?꾩껜?뚯씪.fla`: The Adobe Flash source project file.
+*   `怨좏뼢留뚮몢_寃뚯엫?꾨줈?앺듃?꾩껜scripts/`: Decompiled ActionScript files organized by frames and sprites.
     *   `DefineButton2_*`: Logic for interactive buttons.
     *   `DefineSprite_*`: Logic within movie clip symbols.
     *   `frame_*`: Timeline-based ActionScript logic.

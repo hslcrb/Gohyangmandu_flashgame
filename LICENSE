@@ -1,21 +1,18 @@
-MIT License
+﻿고향만두 플래시 게임 복원 프로젝트 라이선스 / Gohyangmandu Flash Game Restoration Project License
 
-Copyright (c) 2026 Rheehose
+본 프로젝트는 원본 제작자의 의사와 권리 보호를 최우선으로 합니다.
+This project prioritizes the original creator's intentions and the protection of their rights.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. 원본 제작자 정보 / Original Creator Information:
+   - 제작자: Rheehose (Rhee Creative)
+   - 원본 출처: https://blog.naver.com/eflower18/140008961694
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+2. 이용 안내 / Usage Guidelines:
+   - 이 프로젝트는 비영리적인 목적으로 제작되었으며, 원본 제작자의 저작권을 존중합니다.
+   - This project is for non-profit purposes and respects the copyright of the original creator.
+   - 모든 수정 및 배포는 원본 제작자의 고유한 권리에 따르며, 상업적 이용을 금합니다.
+   - All modifications and distribution are subject to the original creator's rights. Commercial use is prohibited.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+3. 면책조항 / Disclaimer:
+   - 본 복원판은 Ruffle 에뮬레이터를 사용하여 로컬 및 현대적 브라우저 환경에서 실행될 수 있도록 돕는 도구입니다.
+   - This restoration is a tool to help the game run in local and modern browser environments using the Ruffle emulator.

@@ -4,109 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>고향만두 - 명가의 맛</title>
+    <title>고향만두 - Ruffle Play</title>
     <link rel="stylesheet" href="style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Gaegu:wght@400;700&display=swap"
-        rel="stylesheet">
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
 
 <body>
     <div id="game-container">
-        <!-- 인트로 화면 -->
-        <section id="screen-intro" class="screen active">
-            <div class="intro-box">
-                <div class="chef-sprite">
-                    <img src="고향만두_전체/frames/130.png" alt="주방장">
-                </div>
-                <div class="dialog-bubble">
-                    <p id="intro-text">"만두맛으로 승비를 결정하자! 진정한 고향만두의 맛을 보여주겠어."</p>
-                </div>
-                <button id="btn-intro-next" class="btn-primary">계속하기</button>
-            </div>
-        </section>
-
-        <!-- 메인 화면 -->
-        <section id="screen-start" class="screen">
-            <div class="overlay">
-                <h1 class="game-title">고향만두</h1>
-                <p class="subtitle">명가의 맛을 빚다</p>
-                <button id="btn-start" class="btn-primary">게임 시작</button>
-            </div>
-        </section>
-
-        <!-- 재료 선택 화면 -->
-        <section id="screen-ingredients" class="screen">
-            <div class="game-stage">
-                <h2 class="section-title">만두소 재료 고르기</h2>
-                <div class="ingredients-grid">
-                    <!-- 재료 버튼들 -->
-                </div>
-                <div class="action-bar">
-                    <button id="btn-to-mixing" class="btn-primary">반죽하기</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 반죽하기 화면 -->
-        <section id="screen-mixing" class="screen">
-            <div class="game-stage">
-                <h2 class="section-title">만두소 섞기</h2>
-                <div class="mixing-area">
-                    <div id="bowl" class="bowl-animation">
-                        <img id="mixing-sprite" src="고향만두_전체/sprites/DefineSprite_261/1.png" alt="믹싱">
-                    </div>
-                </div>
-                <div class="action-bar">
-                    <button id="btn-to-folding" class="btn-primary" disabled>만두 빚기</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 만두 빚기 화면 -->
-        <section id="screen-folding" class="screen">
-            <div class="game-stage">
-                <h2 class="section-title">만두 모양 선택</h2>
-                <div class="shape-grid">
-                    <!-- 모양 옵션들이 동적으로 생성됨 -->
-                </div>
-                <div class="action-bar">
-                    <button id="btn-to-cooking" class="btn-primary">요리하기</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 요리하기 화면 -->
-        <section id="screen-cooking" class="screen">
-            <div class="game-stage">
-                <h2 class="section-title">조리 방식 & 용기 선택</h2>
-                <div class="cooking-container">
-                    <div class="method-selector">
-                        <h3>조리 방식</h3>
-                        <div id="method-options" class="options-grid"></div>
-                    </div>
-                    <div class="container-selector">
-                        <h3>용기 선택</h3>
-                        <div id="container-options" class="options-grid"></div>
-                    </div>
-                </div>
-                <div class="action-bar">
-                    <button id="btn-evaluate" class="btn-primary">맛보기</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 결과 화면 -->
-        <section id="screen-result" class="screen">
-            <div class="result-box">
-                <h2 id="result-title">맛의 평가</h2>
-                <p id="result-desc"></p>
-                <button id="btn-restart" class="btn-secondary">다시 하기</button>
-            </div>
-        </section>
+        <div id="ruffle-player"></div>
     </div>
 
-    <script src="game.js"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("ruffle-player");
+            container.appendChild(player);
+            player.load("고향만두.swf");
+            player.style.width = "800px";
+            player.style.height = "600px";
+        });
+    </script>
 </body>
 
 </html>

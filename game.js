@@ -1,6 +1,6 @@
 const game = {
     state: {
-        screen: 'start',
+        screen: 'intro',
         ingredients: new Map(), // { id: { name: '', selected: false, frame: 1 } }
         scoreSok: 0,
         selectedShape: null,
@@ -58,6 +58,10 @@ const game = {
     },
 
     bindEvents() {
+        document.getElementById('btn-intro-next').addEventListener('click', () => {
+            this.playSound('click');
+            this.changeScreen('start');
+        });
         document.getElementById('btn-start').addEventListener('click', () => {
             this.playSound('click');
             this.changeScreen('ingredients');

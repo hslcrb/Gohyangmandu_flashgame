@@ -53,6 +53,51 @@ body {
     display: flex;
 }
 
+/* 인트로 화면 스타일 */
+#screen-intro {
+    background: #000;
+}
+
+.intro-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.chef-sprite img {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.2));
+}
+
+.dialog-bubble {
+    background: white;
+    padding: 2rem;
+    border-radius: 30px;
+    position: relative;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.dialog-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -20px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.dialog-bubble p {
+    font-family: 'Gaegu', cursive;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #333;
+}
+
 /* 메인 화면 스타일 */
 #screen-start {
     background-image: url('고향만두_전체/frames/1.png');

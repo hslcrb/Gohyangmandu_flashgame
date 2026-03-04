@@ -13,8 +13,21 @@
 
 <body>
     <div id="game-container">
+        <!-- 인트로 화면 -->
+        <section id="screen-intro" class="screen active">
+            <div class="intro-box">
+                <div class="chef-sprite">
+                    <img src="고향만두_전체/frames/130.png" alt="주방장">
+                </div>
+                <div class="dialog-bubble">
+                    <p id="intro-text">"만두맛으로 승비를 결정하자! 진정한 고향만두의 맛을 보여주겠어."</p>
+                </div>
+                <button id="btn-intro-next" class="btn-primary">계속하기</button>
+            </div>
+        </section>
+
         <!-- 메인 화면 -->
-        <section id="screen-start" class="screen active">
+        <section id="screen-start" class="screen">
             <div class="overlay">
                 <h1 class="game-title">고향만두</h1>
                 <p class="subtitle">명가의 맛을 빚다</p>

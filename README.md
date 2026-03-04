@@ -6,18 +6,19 @@ This project is a restoration effort to help you enjoy the classic Korean Flash 
 ## ✨ 원본 제작자 정보 / Original Creator
 - **제작자 (Creator)**: Rheehose (Rhee Creative)
 - **원본 블로그 (Original Source)**: [네이버 블로그 링크](https://blog.naver.com/eflower18/140008961694)
-- **제작 연도 (Created)**: 2008-2026 Rheehose
+- **저작권 (Copyright)**: 2008-2026 Rheehose
 
 ## 🛠️ 주요 수정 사항 / Key Modifications
-- **Ruffle (Flash Emulator) 적용**: 현대적 브라우저 호환성 확보
-- **Base64 직접 임베딩**: 별도의 서버 없이 `index.html` 단독으로 실행 가능 (보안 및 로컬 실행 이슈 해결)
-- **UI 최적화**: 볼륨 조절 및 전체 화면 기능 추가
-- **Bilingual Support**: 한글 및 영어 문서 지원
+- **CDN 기반 Ruffle 적용**: 공식 CDN을 이용해 로컬 보안 정책(`file://`) 이슈 없이 안정적으로 실행
+- **Base64 완전 임베딩**: SWF 바이너리 데이터를 `index.html` 내부에 직접 포함하여 단독 실행 가능
+- **단일 파일 통합**: CSS 및 스크립트를 `index.html`로 통합하여 관리 편의성 극대화
+- **UI 최적화**: 볼륨 조절 및 전체 화면 기능 지원
+- **한영 병기 문서**: `README`, `LICENSE` 등 모든 문서의 다국어 지원
 
 ## 🚀 시작하기 / Getting Started
 - `index.html` 파일을 브라우저로 열기만 하면 즉시 게임이 시작됩니다.
 - Just open `index.html` in your browser to start the game immediately.
 
 ---
-**Restored by Antigravity AI**
-"Keeping the history alive." / "역사를 잊지 않도록 복원합니다."
+**Restored and Maintained by Antigravity AI**
+"Legacy preserved in a single file." / "역사를 단 하나의 파일에 담았습니다."
